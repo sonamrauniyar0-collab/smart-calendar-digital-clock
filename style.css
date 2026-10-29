@@ -1,0 +1,195 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4fb;
+  color: #252746;
+}
+
+header {
+  text-align: center;
+  padding: 25px;
+  background: #6555d9;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.clock-box {
+  text-align: center;
+  background: white;
+  max-width: 400px;
+  margin: 25px auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #ddd;
+}
+
+#clock {
+  color: #6555d9;
+  font-size: 35px;
+  margin: 8px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 10px 20px 30px;
+}
+
+.calendar, .events {
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #ddd;
+}
+
+.calendar {
+  width: 520px;
+}
+
+.events {
+  width: 320px;
+  min-height: 250px;
+}
+
+.month-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.month-bar h2 {
+  font-size: 19px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 14px;
+  background: #6555d9;
+  color: white;
+}
+
+button:hover {
+  background: #4938bd;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 15px;
+}
+
+.calendar-grid div {
+  text-align: center;
+  padding: 12px 2px;
+  border-radius: 7px;
+}
+
+.weekday {
+  font-weight: bold;
+  color: #6555d9;
+  font-size: 12px;
+}
+
+.day {
+  cursor: pointer;
+  background: #f3f2ff;
+}
+
+.day:hover {
+  background: #dedaff;
+}
+
+.day.today {
+  background: #21b49d;
+  color: white;
+  font-weight: bold;
+}
+
+.day.selected {
+  outline: 3px solid #6555d9;
+}
+
+.day.has-event {
+  border-bottom: 4px solid #ffad52;
+}
+
+.hint {
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+.events h2 {
+  color: #6555d9;
+}
+
+#selected-date {
+  font-size: 14px;
+  color: #777;
+}
+
+.event-item {
+  padding: 12px;
+  margin: 10px 0;
+  background: #f3f2ff;
+  border-left: 4px solid #6555d9;
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+
+.event-item button {
+  margin-top: 8px;
+  background: #d94b64;
+}
+
+.empty {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#add-event {
+  width: 100%;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #777;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calendar, .events {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .calendar-grid {
+    gap: 3px;
+  }
+
+  .calendar-grid div {
+    padding: 10px 1px;
+  }
+}

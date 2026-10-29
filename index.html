@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Calendar</h1>
+    <p>Your time, your plans.</p>
+  </header>
+
+  <section class="clock-box">
+    <h2 id="clock">00:00:00</h2>
+    <p id="today-date"></p>
+  </section>
+
+  <main>
+    <section class="calendar">
+      <div class="month-bar">
+        <button id="prev">❮</button>
+        <h2 id="month-year"></h2>
+        <button id="next">❯</button>
+      </div>
+
+      <div id="calendar-grid" class="calendar-grid"></div>
+      <p class="hint">
+        Click a date to view events. Double-click a date to add an event.
+      </p>
+    </section>
+
+    <section class="events">
+      <h2>Events & Reminders</h2>
+      <h3 id="selected-date"></h3>
+      <div id="event-list"></div>
+      <button id="add-event">+ Add Event</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Smart Calendar | Web Development Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
